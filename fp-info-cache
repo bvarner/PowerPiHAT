@@ -1,4 +1,4 @@
-15923262476113665
+15924820278906665
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin{space}Battery{space}Holder,{space}BX0036,{space}Battery{space}Type{space}C{space}(https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -62929,6 +62929,13 @@ Potentiometer{space}vertical{space}Vishay{space}T73YP
 0
 3
 3
+project_footprints
+BarrellJack-DC-902_SMT_Horizontal
+DC-902{space}Barrel{space}Jack{space}3.5mm{space}OD{space}1.3mm{space}ID
+
+0
+5
+4
 project_footprints
 NPTH_3mm_ID
 

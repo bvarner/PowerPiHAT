@@ -5,11 +5,11 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
-Title "PowerPi HAT"
-Date ""
+Title "Pi Power Monitor HAT"
+Date "2019-05-21"
 Rev "A"
-Comp ""
-Comment1 ""
+Comp "Bryan Varner"
+Comment1 "V 1.0.0"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -70,7 +70,7 @@ F 3 "" H 1900 2250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 3150 7400 2    60   ~ 0
-P3V3
+P3V3_HAT
 Text Label 7150 2400 2    60   ~ 0
 P5V_HAT
 Wire Wire Line
@@ -193,7 +193,7 @@ U 1 1 58E1713F
 P 2100 5850
 F 0 "U2" H 2450 6200 50  0000 C CNN
 F 1 "CAT24C32" H 1850 6200 50  0000 C CNN
-F 2 "Package_SOIC:SOIC-8_3.9x4.9mm_P1.27mm" H 2100 5850 50  0001 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2100 5850 50  0000 C CNN
 F 3 "" H 2100 5850 50  0000 C CNN
 	1    2100 5850
 	1    0    0    -1  
@@ -256,17 +256,6 @@ ID_SD_EEPROM_pu
 Text Label 3450 6050 2    60   ~ 0
 ID_SC_EEPROM_pu
 $Comp
-L Connector_Generic:Conn_01x02 J9
-U 1 1 58E18D32
-P 750 6100
-F 0 "J9" H 750 6250 50  0000 C CNN
-F 1 "CONN_01X02" V 850 6100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 750 6100 50  0001 C CNN
-F 3 "" H 750 6100 50  0000 C CNN
-	1    750  6100
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:R R29
 U 1 1 58E19E51
 P 1550 6250
@@ -278,7 +267,7 @@ F 3 "" H 1550 6250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text Label 2400 5350 2    60   ~ 0
-P3V3
+P3V3_HAT
 Wire Wire Line
 	2100 5350 2400 5350
 Wire Wire Line
@@ -303,17 +292,6 @@ Wire Wire Line
 Connection ~ 1300 5750
 Wire Wire Line
 	1300 5850 1600 5850
-$Comp
-L power:GND #PWR04
-U 1 1 58E1AF98
-P 1050 6150
-F 0 "#PWR04" H 1050 5900 50  0001 C CNN
-F 1 "GND" H 1050 6000 50  0000 C CNN
-F 2 "" H 1050 6150 50  0000 C CNN
-F 3 "" H 1050 6150 50  0000 C CNN
-	1    1050 6150
-	1    0    0    -1  
-$EndComp
 Text Notes 3250 5350 0    60   ~ 0
 EEPROM WRITE ENABLE
 Text Notes 1550 7050 0    118  ~ 24
@@ -379,7 +357,7 @@ Wire Wire Line
 Wire Wire Line
 	2700 7650 2700 7400
 Text Notes 1200 5200 0    60   ~ 0
-The HAT spec requires this EEPROM with system information\nto be in place in order to be called a HAT. It should be set up as write\nprotected (WP pin held high), so it may be desirable to either put a \njumper as shown to enable writing, or to hook up a spare IO pin to do so.
+The HAT spec requires this EEPROM with system information\nto be in place in order to be called a HAT. It should be set up as write\nprotected (WP pin held high), the state of the WP can be toggled by setting BCM17 high {slash} low.
 Text Notes 1100 7250 0    60   ~ 0
 These are just pullup resistors for the I2C bus on the EEPROM.\nThe resistor values are per the HAT spec.
 Text Notes 850  1250 0    100  ~ 0
@@ -398,7 +376,7 @@ $EndComp
 Wire Wire Line
 	2100 6250 2100 6350
 Text Label 1800 6550 2    60   ~ 0
-P3V3
+P3V3_HAT
 Wire Wire Line
 	1800 6550 1550 6550
 Wire Wire Line
@@ -413,11 +391,6 @@ Connection ~ 1300 5650
 Wire Wire Line
 	1450 6050 1450 6100
 Connection ~ 1550 6050
-Wire Wire Line
-	950  6100 1050 6100
-Wire Wire Line
-	1050 6150 1050 6100
-Connection ~ 1050 6100
 Wire Wire Line
 	950  6000 1550 6000
 Wire Wire Line
@@ -444,12 +417,9 @@ Wire Wire Line
 	1550 6050 1600 6050
 Wire Wire Line
 	1550 6050 1550 6100
-Wire Wire Line
-	1050 6100 1150 6100
 NoConn ~ 2000 2350
 NoConn ~ 2000 2450
 NoConn ~ 2000 2550
-NoConn ~ 2000 2750
 NoConn ~ 2000 2850
 NoConn ~ 2000 2950
 NoConn ~ 2000 3050
@@ -473,17 +443,6 @@ NoConn ~ 3200 2950
 NoConn ~ 3200 2750
 NoConn ~ 3200 2550
 NoConn ~ 3200 2650
-$Comp
-L Device:R R11
-U 1 1 58E22900
-P 1300 6100
-F 0 "R11" V 1380 6100 50  0000 C CNN
-F 1 "DNP" V 1300 6100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1230 6100 50  0001 C CNN
-F 3 "" H 1300 6100 50  0001 C CNN
-	1    1300 6100
-	0    1    1    0   
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x10 J1
 U 1 1 5CD9D24A
@@ -538,8 +497,8 @@ Wire Wire Line
 	10600 6400 11300 6400
 Text Label 11300 6400 0    50   ~ 0
 GND
-Text Notes 10000 5650 0    118  ~ 24
-ADS111x Header
+Text Notes 10400 5600 0    118  ~ 24
+GY-ADS1115-{slash}ADS1015 Breakout Board
 Wire Wire Line
 	10900 7500 10900 7750
 Wire Wire Line
@@ -880,7 +839,7 @@ Wire Wire Line
 	14450 8450 14450 8700
 Wire Wire Line
 	14150 7500 14150 7750
-Text Notes 10850 7350 0    118  ~ 24
+Text Notes 10750 7250 0    118  ~ 24
 Voltage Dividers and Shunt Resistors
 Wire Notes Line
 	8400 5000 15300 5000
@@ -890,4 +849,52 @@ Wire Notes Line
 	15300 9400 8400 9400
 Wire Notes Line
 	8400 9400 8400 5000
+$Comp
+L Connector:Barrel_Jack_Switch J7
+U 1 1 5CDA2CED
+P 12300 6250
+F 0 "J7" H 12357 6575 50  0000 C CNN
+F 1 "Barrel_Jack" H 12357 6484 50  0000 C CNN
+F 2 "project_footprints:BarrellJack-DC-902_SMT_Horizontal" H 12350 6210 50  0001 C CNN
+F 3 "~" H 12350 6210 50  0001 C CNN
+	1    12300 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12600 6150 12900 6150
+Wire Wire Line
+	12600 6350 12900 6350
+Text Label 12900 6150 0    50   ~ 0
+P5V
+Text Label 12900 6350 0    50   ~ 0
+GND
+NoConn ~ 12600 6250
+Wire Wire Line
+	2000 2750 800  2750
+Text Label 800  2750 0    50   ~ 0
+WP_EEPROM
+Text Label 950  6000 0    50   ~ 0
+WP_EEPROM
+$Comp
+L powerpiHAT-rescue:Mounting_Hole-Mechanical H5
+U 1 1 5CE466C7
+P 13750 5950
+F 0 "H5" H 13600 6050 60  0000 C CNN
+F 1 "3mm_Mounting_Hole" H 13750 5800 60  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 13650 5950 60  0001 C CNN
+F 3 "" H 13650 5950 60  0001 C CNN
+	1    13750 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L powerpiHAT-rescue:Mounting_Hole-Mechanical H6
+U 1 1 5CE46CA9
+P 13750 6450
+F 0 "H6" H 13600 6550 60  0000 C CNN
+F 1 "3mm_Mounting_Hole" H 13750 6300 60  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 13650 6450 60  0001 C CNN
+F 3 "" H 13650 6450 60  0001 C CNN
+	1    13750 6450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
