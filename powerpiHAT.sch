@@ -342,10 +342,6 @@ Text Label 4400 3550 2    60   ~ 0
 ID_SC_EEPROM
 Text Label 4400 3850 2    60   ~ 0
 GND
-Text Label 4400 2450 2    60   ~ 0
-GND
-Wire Wire Line
-	3200 2450 4400 2450
 Text Label 4400 2350 2    60   ~ 0
 P5V_HAT
 Wire Wire Line
@@ -441,8 +437,6 @@ NoConn ~ 3200 3250
 NoConn ~ 3200 3050
 NoConn ~ 3200 2950
 NoConn ~ 3200 2750
-NoConn ~ 3200 2550
-NoConn ~ 3200 2650
 $Comp
 L Connector_Generic:Conn_01x10 J1
 U 1 1 5CD9D24A
@@ -454,8 +448,6 @@ F 3 "~" H 10400 6400 50  0001 C CNN
 	1    10400 6400
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	10600 6000 10850 6000
 Wire Wire Line
 	10600 6100 10850 6100
 Wire Wire Line
@@ -472,8 +464,6 @@ Wire Wire Line
 	10600 6800 10850 6800
 Wire Wire Line
 	10600 6900 10850 6900
-Text Label 10850 6000 0    50   ~ 0
-P5V_HAT
 Text Label 10850 6100 0    50   ~ 0
 GND
 Text Label 10850 6200 0    50   ~ 0
@@ -897,4 +887,44 @@ F 3 "" H 13650 6450 60  0001 C CNN
 	1    13750 6450
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3200 2550 4400 2550
+Wire Wire Line
+	3200 2650 4400 2650
+Text Label 4400 2550 2    50   ~ 0
+PI_UART_TXD
+Text Label 4400 2650 2    50   ~ 0
+PI_UART_RXD
+$Comp
+L Connector_Generic:Conn_01x04 J8
+U 1 1 5CE48ADC
+P 9650 6000
+F 0 "J8" H 9730 5992 50  0000 L CNN
+F 1 "Conn_01x04" H 9730 5901 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 9650 6000 50  0001 C CNN
+F 3 "~" H 9650 6000 50  0001 C CNN
+	1    9650 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 6000 9000 6000
+Wire Wire Line
+	9450 6100 9000 6100
+Text Label 9000 6100 0    50   ~ 0
+PI_UART_TXD
+Text Label 9000 6000 0    50   ~ 0
+PI_UART_RXD
+Wire Wire Line
+	9450 5900 9000 5900
+Wire Wire Line
+	9450 6200 9000 6200
+Text Label 9000 5900 0    50   ~ 0
+GND
+Text Label 9000 6200 0    50   ~ 0
+P5V_HAT
+Wire Wire Line
+	10600 6000 10850 6000
+Text Label 10850 6000 0    50   ~ 0
+P5V_HAT
+NoConn ~ 3200 2450
 $EndSCHEMATC
