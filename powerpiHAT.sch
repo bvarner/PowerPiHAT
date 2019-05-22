@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L powerpiHAT-rescue:Mounting_Hole-Mechanical H1
+L powerpiHAT-rescue:Mounting_Hole-Mechanical-powerpiHAT-rescue-powerpiHAT-rescue H1
 U 1 1 5834BC4A
 P 5700 4650
 F 0 "H1" H 5550 4750 60  0000 C CNN
@@ -26,7 +26,7 @@ F 3 "" H 5600 4650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L powerpiHAT-rescue:Mounting_Hole-Mechanical H2
+L powerpiHAT-rescue:Mounting_Hole-Mechanical-powerpiHAT-rescue-powerpiHAT-rescue H2
 U 1 1 5834BCDF
 P 6700 4650
 F 0 "H2" H 6550 4750 60  0000 C CNN
@@ -37,7 +37,7 @@ F 3 "" H 6600 4650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L powerpiHAT-rescue:Mounting_Hole-Mechanical H3
+L powerpiHAT-rescue:Mounting_Hole-Mechanical-powerpiHAT-rescue-powerpiHAT-rescue H3
 U 1 1 5834BD62
 P 5700 5200
 F 0 "H3" H 5550 5300 60  0000 C CNN
@@ -48,7 +48,7 @@ F 3 "" H 5600 5200 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L powerpiHAT-rescue:Mounting_Hole-Mechanical H4
+L powerpiHAT-rescue:Mounting_Hole-Mechanical-powerpiHAT-rescue-powerpiHAT-rescue H4
 U 1 1 5834BDED
 P 6750 5200
 F 0 "H4" H 6600 5300 60  0000 C CNN
@@ -59,7 +59,7 @@ F 3 "" H 6650 5200 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L powerpiHAT-rescue:OX40HAT-raspberrypi_hat J3
+L powerpiHAT-rescue:OX40HAT-raspberrypi_hat-powerpiHAT-rescue-powerpiHAT-rescue J3
 U 1 1 58DFC771
 P 2600 2250
 F 0 "J3" H 2950 2350 50  0000 C CNN
@@ -73,45 +73,30 @@ Text Label 3150 7400 2    60   ~ 0
 P3V3_HAT
 Text Label 7150 2400 2    60   ~ 0
 P5V_HAT
-Wire Wire Line
-	6400 2400 6550 2400
 Text Label 5300 2400 0    60   ~ 0
 P5V
-Wire Wire Line
-	5300 2400 5750 2400
 Text Notes 5150 1750 0    118  ~ 24
 5V Powered HAT Protection
 Text Notes 4900 2050 0    60   ~ 0
 This is the recommended 5V rail protection for \na HAT with power going to the Pi.\nSee https://github.com/raspberrypi/hats/blob/master/designguide.md#back-powering-the-pi-via-the-j8-gpio-header
 $Comp
-L powerpiHAT-rescue:DMG2305UX-raspberrypi_hat Q1
-U 1 1 58E14EB1
-P 6150 2400
-F 0 "Q1" V 6300 2550 50  0000 R CNN
-F 1 "DMG2305UX" V 6300 2350 50  0000 R CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 6350 2500 50  0001 C CNN
-F 3 "" H 6150 2400 50  0000 C CNN
-	1    6150 2400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L powerpiHAT-rescue:DMMT5401-raspberrypi_hat Q2
+L powerpiHAT-rescue:DMMT5401-raspberrypi_hat-powerpiHAT-rescue-powerpiHAT-rescue Q2
 U 1 1 58E1538B
 P 5850 3000
 F 0 "Q2" H 6050 3075 50  0000 L CNN
 F 1 "DMMT5401" H 6050 3000 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6050 2925 50  0000 L CIN
+F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 6050 2925 50  0000 L CIN
 F 3 "" H 5850 3000 50  0000 L CNN
 	1    5850 3000
 	-1   0    0    1   
 $EndComp
 $Comp
-L powerpiHAT-rescue:DMMT5401-raspberrypi_hat Q2
+L powerpiHAT-rescue:DMMT5401-raspberrypi_hat-powerpiHAT-rescue-powerpiHAT-rescue Q2
 U 2 1 58E153D6
 P 6450 3000
 F 0 "Q2" H 6650 3075 50  0000 L CNN
 F 1 "DMMT5401" H 6650 3000 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6650 2925 50  0000 L CIN
+F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 6650 2925 50  0000 L CIN
 F 3 "" H 6450 3000 50  0000 L CNN
 	2    6450 3000
 	1    0    0    1   
@@ -163,11 +148,9 @@ $EndComp
 Wire Wire Line
 	5750 3800 5750 3750
 Wire Wire Line
-	6550 3800 6550 3750
-Wire Wire Line
 	6550 3200 6550 3300
 Wire Wire Line
-	6150 2650 6150 3300
+	6150 2650 6150 2700
 Wire Wire Line
 	6150 3300 6550 3300
 Connection ~ 6550 3300
@@ -182,13 +165,9 @@ Wire Wire Line
 	6250 3350 6250 3000
 Connection ~ 6050 3350
 Wire Wire Line
-	5750 2800 5750 2400
-Connection ~ 5750 2400
-Wire Wire Line
 	6550 2800 6550 2400
-Connection ~ 6550 2400
 $Comp
-L powerpiHAT-rescue:CAT24C32-raspberrypi_hat U2
+L powerpiHAT-rescue:CAT24C32-raspberrypi_hat-powerpiHAT-rescue-powerpiHAT-rescue U2
 U 1 1 58E1713F
 P 2100 5850
 F 0 "U2" H 2450 6200 50  0000 C CNN
@@ -221,40 +200,20 @@ F 3 "" H 2350 7650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1250 7400 2150 7400
-Wire Wire Line
-	1250 7650 2150 7650
-Wire Wire Line
-	2150 7500 1250 7500
-Wire Wire Line
-	2150 7750 1250 7750
-Wire Wire Line
-	2150 7750 2150 7650
-Connection ~ 2150 7650
-Wire Wire Line
-	2150 7500 2150 7400
-Connection ~ 2150 7400
-Wire Wire Line
 	2500 7400 2700 7400
 Wire Wire Line
 	2700 7650 2500 7650
 Connection ~ 2700 7400
 Text Label 1250 7400 0    60   ~ 0
-ID_SD_EEPROM_pu
-Text Label 1250 7500 0    60   ~ 0
 ID_SD_EEPROM
-Text Label 1250 7650 0    60   ~ 0
-ID_SC_EEPROM_pu
-Text Label 1250 7750 0    60   ~ 0
-ID_SC_EEPROM
 Wire Wire Line
 	3450 6050 2600 6050
 Wire Wire Line
 	2600 5950 3450 5950
 Text Label 3450 5950 2    60   ~ 0
-ID_SD_EEPROM_pu
+ID_SD_EEPROM
 Text Label 3450 6050 2    60   ~ 0
-ID_SC_EEPROM_pu
+ID_SC_EEPROM
 $Comp
 L Device:R R29
 U 1 1 58E19E51
@@ -396,13 +355,11 @@ Wire Wire Line
 Wire Wire Line
 	6050 3350 6250 3350
 Wire Wire Line
-	5750 2400 5900 2400
-Wire Wire Line
 	6550 2400 7150 2400
 Wire Wire Line
-	2150 7650 2200 7650
+	1250 7650 2200 7650
 Wire Wire Line
-	2150 7400 2200 7400
+	1250 7400 2200 7400
 Wire Wire Line
 	2700 7400 3150 7400
 Wire Wire Line
@@ -467,11 +424,9 @@ Wire Wire Line
 Text Label 10850 6100 0    50   ~ 0
 GND
 Text Label 10850 6200 0    50   ~ 0
-ID_SC_EEPROM_pu
+ID_SC_EEPROM
 Text Label 10850 6300 0    50   ~ 0
-ID_SD_EEPROM_pu
-Text Label 10850 6500 0    50   ~ 0
-ADS_ALRT
+ID_SD_EEPROM
 Text Label 10850 6600 0    50   ~ 0
 ADS_A0
 Text Label 10850 6700 0    50   ~ 0
@@ -866,7 +821,7 @@ WP_EEPROM
 Text Label 950  6000 0    50   ~ 0
 WP_EEPROM
 $Comp
-L powerpiHAT-rescue:Mounting_Hole-Mechanical H5
+L powerpiHAT-rescue:Mounting_Hole-Mechanical-powerpiHAT-rescue-powerpiHAT-rescue H5
 U 1 1 5CE466C7
 P 13750 5950
 F 0 "H5" H 13600 6050 60  0000 C CNN
@@ -877,7 +832,7 @@ F 3 "" H 13650 5950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L powerpiHAT-rescue:Mounting_Hole-Mechanical H6
+L powerpiHAT-rescue:Mounting_Hole-Mechanical-powerpiHAT-rescue-powerpiHAT-rescue H6
 U 1 1 5CE46CA9
 P 13750 6450
 F 0 "H6" H 13600 6550 60  0000 C CNN
@@ -927,4 +882,79 @@ Wire Wire Line
 Text Label 10850 6000 0    50   ~ 0
 P5V_HAT
 NoConn ~ 3200 2450
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:DMG2305UX-13 Q1
+U 1 1 58E14EB1
+P 6050 2400
+F 0 "Q1" V 6200 2550 50  0000 R CNN
+F 1 "DMG2305UX" V 6200 2350 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6250 2500 50  0001 C CNN
+F 3 "" H 6050 2400 50  0000 C CNN
+	1    6050 2400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5750 2800 5750 2400
+Wire Wire Line
+	5300 2400 5750 2400
+Connection ~ 6150 2700
+Wire Wire Line
+	6150 2700 6150 3300
+Wire Wire Line
+	6250 2400 6550 2400
+Connection ~ 6550 2400
+Wire Wire Line
+	5850 2400 5750 2400
+Connection ~ 5750 2400
+Text Label 1250 7650 0    60   ~ 0
+ID_SC_EEPROM
+Wire Wire Line
+	6550 3750 6550 3800
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5CE5873C
+P 12600 6150
+F 0 "#FLG0101" H 12600 6225 50  0001 C CNN
+F 1 "PWR_FLAG" H 12600 6323 50  0000 C CNN
+F 2 "" H 12600 6150 50  0001 C CNN
+F 3 "~" H 12600 6150 50  0001 C CNN
+	1    12600 6150
+	1    0    0    -1  
+$EndComp
+Connection ~ 12600 6150
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5CE58B7B
+P 2000 2250
+F 0 "#FLG0102" H 2000 2325 50  0001 C CNN
+F 1 "PWR_FLAG" H 2000 2423 50  0000 C CNN
+F 2 "" H 2000 2250 50  0001 C CNN
+F 3 "~" H 2000 2250 50  0001 C CNN
+	1    2000 2250
+	1    0    0    -1  
+$EndComp
+Connection ~ 2000 2250
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5CE58E58
+P 3200 2250
+F 0 "#FLG0103" H 3200 2325 50  0001 C CNN
+F 1 "PWR_FLAG" H 3200 2423 50  0000 C CNN
+F 2 "" H 3200 2250 50  0001 C CNN
+F 3 "~" H 3200 2250 50  0001 C CNN
+	1    3200 2250
+	1    0    0    -1  
+$EndComp
+Connection ~ 3200 2250
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5CE598DC
+P 1300 5650
+F 0 "#FLG0104" H 1300 5725 50  0001 C CNN
+F 1 "PWR_FLAG" H 1300 5823 50  0000 C CNN
+F 2 "" H 1300 5650 50  0001 C CNN
+F 3 "~" H 1300 5650 50  0001 C CNN
+	1    1300 5650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
