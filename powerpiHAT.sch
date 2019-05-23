@@ -370,8 +370,6 @@ Wire Wire Line
 	1550 6050 1600 6050
 Wire Wire Line
 	1550 6050 1550 6100
-NoConn ~ 2000 2350
-NoConn ~ 2000 2450
 NoConn ~ 2000 2550
 NoConn ~ 2000 2850
 NoConn ~ 2000 2950
@@ -424,9 +422,9 @@ Wire Wire Line
 Text Label 10850 6100 0    50   ~ 0
 GND
 Text Label 10850 6200 0    50   ~ 0
-ID_SC_EEPROM
+BCM_3
 Text Label 10850 6300 0    50   ~ 0
-ID_SD_EEPROM
+BCM_2
 Text Label 10850 6600 0    50   ~ 0
 ADS_A0
 Text Label 10850 6700 0    50   ~ 0
@@ -957,4 +955,12 @@ F 3 "~" H 1300 5650 50  0001 C CNN
 	1    1300 5650
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2000 2350 800  2350
+Wire Wire Line
+	2000 2450 800  2450
+Text Label 800  2350 0    50   ~ 0
+BCM_2
+Text Label 800  2450 0    50   ~ 0
+BCM_3
 $EndSCHEMATC

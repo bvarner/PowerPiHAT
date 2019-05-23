@@ -1,7 +1,7 @@
 # PowerPiHAT
 A Raspberry Pi HAT for building a whole-house electricity monitor using PZCT-02 split core current transformers.
 
-## Design Decisions:
+## Design Decisions
 * Use an inexpensive split-core CT capable of 100A, that can be clipped onto the mains in my electrical panel.
 * Allow for easy connection of the CTs to the device.
 * Produce a spec-compliant HAT.
@@ -9,9 +9,19 @@ A Raspberry Pi HAT for building a whole-house electricity monitor using PZCT-02 
     * Proper cutouts, clearances, etc.
 * Use an inexpensive ADS1115 module to reduce overall part cost. (It's cheaper to buy a breakout module than it is to buy the chips in low quantity)
 
+## The Board
+You can manufacture the board at home, using dual-sided 2-oz copper-clad board.
+
+I've optimized trace spacing for what I've been capable of producing at home using the 'laser-printer hot-transfer' method to mask prior to chemical etching.
+
+The footprints of the SMT components could be smaller for mass production, but I chose the sizes based on what I've been able to hand-solder with an inexpensive 'hobbiest' 25watt soldering iron with a blade tip.
+
+Contrary to the HAT spec, the mounting holes are not defined at non-plated through-hole in the current repository. Since I'm hand-manufacturing these boards, I need to have a precise drill location. KiCad doesn't seem to emit drill markers to the etch layers unless the hole is plated through-hole. So, I've set those as plated, and will drill the entire pad away.
+
+
 ## Sourcing Parts
 
-Estimated total cost fo the build, with more parts than you need (volume pricing on imports), comes to around **$65**.
+Estimated total cost fo the build, with more parts than you need (volume pricing on imports), comes to around **$65** -- including the RaspberryPi!
 
 ### Import Parts / Supplies for the PCB
 
@@ -41,5 +51,7 @@ As of 5/21/2019, the estimated BOM cost is ~$10.
 "SSQ-110-03-T-S"	"SAM1206-10-ND"	""	"J1"	"1"	"1.20000"	"CONN RCPT 10POS 0.1 TIN PCB"
 "SSW-120-01-T-D"	"SAM1212-20-ND"	""	"J3"	"1"	"2.90000"	"CONN RCPT 40POS 0.1 TIN PCB"
 ```
+
+
 
 
