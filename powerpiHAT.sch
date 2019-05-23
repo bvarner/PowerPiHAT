@@ -963,4 +963,26 @@ Text Label 800  2350 0    50   ~ 0
 BCM_2
 Text Label 800  2450 0    50   ~ 0
 BCM_3
+$Comp
+L powerpiHAT-rescue:Mounting_Hole-Mechanical-powerpiHAT-rescue-powerpiHAT-rescue H7
+U 1 1 5CE75855
+P 14750 5950
+F 0 "H7" H 14600 6050 60  0000 C CNN
+F 1 "3mm_Mounting_Hole" H 14750 5800 60  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 14650 5950 60  0001 C CNN
+F 3 "" H 14650 5950 60  0001 C CNN
+	1    14750 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L powerpiHAT-rescue:Mounting_Hole-Mechanical-powerpiHAT-rescue-powerpiHAT-rescue H8
+U 1 1 5CE7585F
+P 14750 6450
+F 0 "H8" H 14600 6550 60  0000 C CNN
+F 1 "3mm_Mounting_Hole" H 14750 6300 60  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 14650 6450 60  0001 C CNN
+F 3 "" H 14650 6450 60  0001 C CNN
+	1    14750 6450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

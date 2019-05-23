@@ -8,15 +8,18 @@ A Raspberry Pi HAT for building a whole-house electricity monitor using PZCT-02 
     * Safely back-power the Raspberry Pi from the HAT.
     * Proper cutouts, clearances, etc.
 * Use an inexpensive ADS1115 module to reduce overall part cost. (It's cheaper to buy a breakout module than it is to buy the chips in low quantity)
+    * GY-ADS1115 (Available from ebay, aliexpress, etc.)
+    * Adafruit ADS1115. Both are pin-compatible, and there are mount holes for each module on the board.
 
 ## The Board
-You can manufacture the board at home, using dual-sided 2-oz copper-clad board.
+You can manufacture the board at home, using dual-sided 2-oz copper-clad board. Important: The traces for the analog input are sized assuming 2oz copper.
 
 I've optimized trace spacing for what I've been capable of producing at home using the 'laser-printer hot-transfer' method to mask prior to chemical etching.
+There are also extraneous vias to breakout header pins in case soldering both sides of the pin is problematic (no through-hole plating).
 
 The footprints of the SMT components could be smaller for mass production, but I chose the sizes based on what I've been able to hand-solder with an inexpensive 'hobbiest' 25watt soldering iron with a blade tip.
 
-Contrary to the HAT spec, the mounting holes are not defined at non-plated through-hole in the current repository. Since I'm hand-manufacturing these boards, I need to have a precise drill location. KiCad doesn't seem to emit drill markers to the etch layers unless the hole is plated through-hole. So, I've set those as plated, and will drill the entire pad away.
+Contrary to the HAT spec, the mounting holes are not defined as non-plated through-hole in the current repository. Since I'm hand-manufacturing these boards, I need to have a precise drill location. KiCad doesn't seem to emit drill markers to the etch layers unless the hole is plated through-hole. So, I've set those as plated, and will drill the entire pad away.
 
 
 ## Sourcing Parts
@@ -51,7 +54,4 @@ As of 5/21/2019, the estimated BOM cost is ~$10.
 "SSQ-110-03-T-S"	"SAM1206-10-ND"	""	"J1"	"1"	"1.20000"	"CONN RCPT 10POS 0.1 TIN PCB"
 "SSW-120-01-T-D"	"SAM1212-20-ND"	""	"J3"	"1"	"2.90000"	"CONN RCPT 40POS 0.1 TIN PCB"
 ```
-
-
-
 
